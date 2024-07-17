@@ -7,8 +7,14 @@ import { Toaster } from "react-hot-toast";
 import { useAuthContext } from "./context/AuthContext";
 import Navbar from "./components/component/navbar"
 import ProfileId from "./pages/profile/Profile";
+import { useEffect } from "react";
 function App() {
 	const { authUser } = useAuthContext();
+
+
+	// useEffect(()=>{
+	// 	console.log()(process.env.REACT_APP_BASE_URL)
+	// },[])
 	return (
 		<div className='h-screen flex flex-col items-center gap-10 bg-lightGray '>
 			{authUser && <Navbar/>}

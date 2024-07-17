@@ -16,7 +16,7 @@ const ProfileId = () => {
       setError(null);
 
       try {
-        const response = await fetch(`http://localhost:5000/api/users/user-details/${userId}`);
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/users/user-details/${userId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch user details');
         }
